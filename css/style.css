@@ -1,0 +1,115 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root {
+    --cyan-color: hsl(179, 62%, 43%);
+    --yellow-color: hsl(71, 73%, 54%);
+    --gray-color: hsl(204, 43%, 93%);
+    --blue-color: hsl(218, 22%, 67%);
+    --karla-font: 'Karla', sans-serif;
+}
+body {
+    font-size: 16px;
+    font-family: var(--karla-font);
+    background-color: var(--gray-color);
+}
+.content {
+    width: 700px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px auto;
+    background-color: var(--gray-color);
+    border-radius: 10px !important;
+}
+.content .subscription,
+.content .info {
+    flex-basis: 50%;
+    width: 500px;
+}
+.content .card {
+    padding: 40px;
+}
+.content h2 {
+    margin-bottom: 30px;
+}
+.content h4 {
+    margin-bottom: 20px;
+}
+.content .community {
+    flex-basis: 100%;
+    background-color: white;
+}
+.content .community h2 {
+    color: var(--cyan-color);
+}
+.content .community h4 {
+    color: var(--yellow-color);
+}
+.content .community p {
+    color: var(--blue-color);
+    width: 86%;
+    line-height: 1.5;
+}
+.content .subscription {
+    background-color: var(--cyan-color);
+    color: white;
+}
+.content .subscription h4 {
+    color: var(--gray-color);
+}
+.content .subscription h4 span {
+    color: white;
+    font-size: 40px;
+    margin-right: 20px;
+}
+.content .subscription p {
+    margin-bottom: 35px;
+}
+.content .subscription button {
+    color: white;
+    border: none;
+    background-color: var(--yellow-color);
+    width: 100%;
+    height: 50px;
+    font-size: 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.content .subscription button:hover {
+    background-color: hsl(71deg 73% 54% / 56%);
+}
+.content .info {
+    background-color: hsl(179deg 62% 43% / 72%);
+}
+.content .info h2 {
+    color: white;
+}
+.content .info div {
+    color: var(--gray-color);
+    line-height: 1.6;
+}
+footer {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+@media (max-width: 767px) {
+    .content {
+        width: 340px;
+        justify-content: center;
+        margin: 50px auto;
+    }
+    .content .card {
+        flex: 1 0 330px;
+    }
+    .content .community p {
+        width: 100%;
+        line-height: 1.4;
+    }
+    footer div {
+        font-size: 13px;
+    }
+}
